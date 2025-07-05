@@ -11,4 +11,4 @@ class Checksum(BaseModel):
     token: str
 
 class Flag(BaseModel):
-    flags: str
+    flag: str

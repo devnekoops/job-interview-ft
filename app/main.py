@@ -7,7 +7,7 @@ from . import schemas
 app = FastAPI()
 
 
-@app.post("/login/", response_model=schemas.Checksum)
+@app.post("/login", response_model=schemas.Checksum)
 def login(user: schemas.Login):
 
     hash_obj = hashlib.new("SHA1")
@@ -16,7 +16,7 @@ def login(user: schemas.Login):
     return {"token": digest}
 
 
-@app.post("/flag/", response_model=schemas.Flag)
+@app.post("/flag", response_model=schemas.Flag)
 def login(flag: schemas.Flag):
     print(flag.flag)
     return {"status": "ok"}
