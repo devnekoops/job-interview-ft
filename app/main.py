@@ -16,7 +16,7 @@ def login(user: schemas.Login):
     return {"token": digest}
 
 
-@app.post("/flag", response_model=schemas.Flag)
+@app.post("/flag")
 def login(flag: schemas.Flag):
     print(flag.flag)
     return {"status": "ok"}
